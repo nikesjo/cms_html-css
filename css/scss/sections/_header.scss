@@ -11,14 +11,18 @@ header {
             }
 
             .social-media {
-                display: flex;
+                display: none;
                 justify-content: center;
                 align-items: center;
                 gap: 15px;
+    
+                @include desktop {
+                    display: flex;
+                }
+                
                 .vl {
                     border-left: 1px solid #606966;
                     height: 100%;
-
                 }
 
                 .social {
@@ -69,17 +73,17 @@ header {
                 .menu-link {
                     font-weight: 700;
                     color: var(--color-primary);
-                    transition: 0.25s ease-in-out;
-                    text-decoration: none;
+                    transition: 0.25s ease-in-out; 
 
                     &:hover {    
                         color: var(--color-secondary);
+                        text-decoration: none;
                     }
                 }
             }
         }
 
-        .search { 
+        .search-form { 
             grid-area: search; 
             display: none;
             gap: 15px;

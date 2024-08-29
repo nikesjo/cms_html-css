@@ -29,10 +29,11 @@ body {
 .wrapper {
   display: grid;
   grid-template-rows: auto 1fr auto;
+  height: 100vh;
 }
 @media (min-width: 1400px) {
   .wrapper {
-    grid-template-rows: auto auto 1fr auto;
+    grid-template-rows: auto 1fr auto;
   }
 }
 
@@ -61,10 +62,10 @@ a {
   font-weight: 400;
   font-style: normal;
   font-size: 1em;
-  text-decoration: underline;
+  text-decoration: none;
 }
 a:hover {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .btn-dark, .btn-primary, .btn-secondary, .btn-accent, .btn-gray, .btn-light {
@@ -158,10 +159,15 @@ header .header-top .container p {
   color: var(--color-light);
 }
 header .header-top .container .social-media {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   gap: 15px;
+}
+@media (min-width: 1400px) {
+  header .header-top .container .social-media {
+    display: flex;
+  }
 }
 header .header-top .container .social-media .vl {
   border-left: 1px solid #606966;
@@ -216,18 +222,18 @@ header .header-menu #menu nav .menu-link {
   font-weight: 700;
   color: var(--color-primary);
   transition: 0.25s ease-in-out;
-  text-decoration: none;
 }
 header .header-menu #menu nav .menu-link:hover {
   color: var(--color-secondary);
+  text-decoration: none;
 }
-header .header-menu .search {
+header .header-menu .search-form {
   grid-area: search;
   display: none;
   gap: 15px;
 }
 @media (min-width: 1400px) {
-  header .header-menu .search {
+  header .header-menu .search-form {
     display: flex;
   }
 }
@@ -239,4 +245,249 @@ header .header-menu .btn-menu {
   header .header-menu .btn-menu {
     display: none;
   }
+}
+
+.about-hero {
+  position: relative;
+  background-color: var(--color-gray);
+}
+.about-hero .img-1 {
+  display: none;
+  position: absolute;
+  bottom: 0;
+}
+@media (min-width: 1400px) {
+  .about-hero .img-1 {
+    display: block;
+  }
+}
+.about-hero .img-2 {
+  display: none;
+  position: absolute;
+  right: 0;
+}
+@media (min-width: 1400px) {
+  .about-hero .img-2 {
+    display: block;
+  }
+}
+.about-hero .container {
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+.about-hero .container .breadcrumb {
+  font-size: 14px;
+}
+.about-hero .container .breadcrumb .breadcrumb-home {
+  color: var(--color-primary);
+}
+.about-hero .container .breadcrumb i {
+  font-size: 10px;
+  padding: 0 10px;
+}
+
+.about-us .container {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 50px 30px;
+}
+@media (min-width: 1400px) {
+  .about-us .container {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    padding: 100px 0;
+  }
+}
+.about-us .container .ceo {
+  font-style: italic;
+}
+.about-us .container .ceo img {
+  display: none;
+}
+@media (min-width: 1400px) {
+  .about-us .container .ceo img {
+    display: block;
+  }
+}
+.about-us .container .ceo p {
+  padding-top: 15px;
+}
+.about-us .container .about-us-text h4 {
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 400;
+  padding-top: 5px;
+}
+.about-us .container .about-us-text p {
+  font-size: 14px;
+  line-height: 2.1;
+}
+
+.testimonial {
+  background-color: var(--color-gray);
+  position: relative;
+  height: 511px;
+  display: flex;
+  align-items: center;
+}
+.testimonial .testimonial-img {
+  display: none;
+  position: absolute;
+  right: 0;
+}
+@media (min-width: 1400px) {
+  .testimonial .testimonial-img {
+    display: block;
+  }
+}
+.testimonial .container .testimonial-review {
+  max-width: 555px;
+  padding: 20px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .testimonial .container .testimonial-review {
+    align-items: center;
+  }
+}
+@media (min-width: 1400px) {
+  .testimonial .container .testimonial-review {
+    padding: 0;
+    text-align: left;
+  }
+}
+.testimonial .container .testimonial-review .testimonial-text {
+  font-style: italic;
+  color: #999;
+  font-size: 20px;
+}
+.testimonial .container .testimonial-review .stars {
+  color: #212121;
+  padding-bottom: 20px;
+}
+.testimonial .container .testimonial-review .signature {
+  padding-bottom: 5px;
+  color: #2D303A;
+}
+.testimonial .container .testimonial-review .swebank {
+  font-style: italic;
+  font-size: 20px;
+  color: #2D303A;
+}
+
+.expert-team .container {
+  padding-top: 110px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.expert-team .container .cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+@media (min-width: 1400px) {
+  .expert-team .container .cards {
+    flex-direction: row;
+  }
+}
+.expert-team .container .cards .card {
+  border: 1px solid #EAEAEA;
+}
+.expert-team .container .cards .card .content {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.expert-team .container .cards .card .content h4 {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.expert-team .container .cards .card .content p {
+  font-size: 13px;
+  color: #9C9EA6;
+}
+
+.contact {
+  background-color: var(--color-gray);
+  padding-top: 40px;
+}
+.contact .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 1400px) {
+  .contact .container {
+    justify-content: space-between;
+  }
+}
+.contact .container .contact-info-guy {
+  z-index: 1;
+  display: none;
+}
+@media (min-width: 1400px) {
+  .contact .container .contact-info-guy {
+    display: block;
+  }
+}
+.contact .container .contact-info-background {
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  display: none;
+}
+@media (min-width: 1400px) {
+  .contact .container .contact-info-background {
+    display: block;
+  }
+}
+.contact .container .contact-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+@media (min-width: 1400px) {
+  .contact .container .contact-info {
+    text-align: left;
+    padding-right: 120px;
+  }
+}
+.contact .container .contact-info .contact-boxes .box {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+@media (min-width: 1400px) {
+  .contact .container .contact-info .contact-boxes .box {
+    justify-content: start;
+  }
+}
+.contact .container .contact-info .contact-boxes .box i {
+  font-size: 20px;
+  color: var(--color-secondary);
+  padding-top: 5px;
+}
+.contact .container .contact-info .contact-boxes .box .right-text {
+  color: var(--color-primary);
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+footer {
+  background-color: var(--color-dark);
+}
+footer .container {
+  padding-top: 20px;
+  padding-bottom: 5px;
+  color: var(--color-primary);
+  font-size: 14px;
+}
+footer .container span {
+  color: var(--color-secondary);
 }
