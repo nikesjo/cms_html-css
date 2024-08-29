@@ -66,15 +66,6 @@ a {
 a:hover {
   text-decoration: none;
 }
-a[target=_blank]::after {
-  content: "\f08e";
-  font-family: "Font Awesome 6 Pro";
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 0.8em;
-  margin-left: 0.4em;
-  margin-top: -0.9em;
-}
 
 .btn-dark, .btn-primary, .btn-secondary, .btn-accent, .btn-gray, .btn-light {
   display: inline-block;
@@ -154,4 +145,98 @@ h5 {
 
 h6 {
   font-size: 14px;
+}
+
+header .header-top {
+  background-color: var(--color-primary);
+}
+header .header-top .container {
+  display: flex;
+  justify-content: space-between;
+}
+header .header-top .container p {
+  color: var(--color-light);
+}
+header .header-top .container .social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+header .header-top .container .social-media .vl {
+  border-left: 1px solid #606966;
+  height: 100%;
+}
+header .header-top .container .social-media .social {
+  color: var(--color-light);
+}
+header .header-menu {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "logo mobile";
+  gap: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+@media (min-width: 1400px) {
+  header .header-menu {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "logo menu search";
+  }
+}
+header .header-menu #logo {
+  grid-area: logo;
+}
+header .header-menu #menu {
+  grid-area: menu;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 1400px) {
+  header .header-menu #menu {
+    display: block;
+  }
+}
+header .header-menu #menu nav {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+@media (min-width: 1400px) {
+  header .header-menu #menu nav {
+    gap: 80px;
+  }
+}
+header .header-menu #menu nav .menu-link {
+  font-weight: 700;
+  color: var(--color-primary);
+  transition: 0.25s ease-in-out;
+  text-decoration: none;
+}
+header .header-menu #menu nav .menu-link:hover {
+  color: var(--color-secondary);
+}
+header .header-menu .search {
+  grid-area: search;
+  display: none;
+  gap: 15px;
+}
+@media (min-width: 1400px) {
+  header .header-menu .search {
+    display: flex;
+  }
+}
+header .header-menu .btn-menu {
+  grid-area: mobile;
+  display: block;
+}
+@media (min-width: 1400px) {
+  header .header-menu .btn-menu {
+    display: none;
+  }
 }

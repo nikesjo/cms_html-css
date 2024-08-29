@@ -8,16 +8,16 @@ a {
         text-decoration: none;
     }
 
-    &[target="_blank"] {
+    // &[target="_blank"] {
 
-        &::after {
-            content: '\f08e';
-            font-family: "Font Awesome 6 Pro";
-            display: inline-block;
-            vertical-align: middle;
-            font-size: 0.8em;
-            margin-left: 0.4em;
-            margin-top: -0.9em;
-        }
-    }
+    //     &::after {
+    //         content: '\f08e';
+    //         font-family: "Font Awesome 6 Pro";
+    //         display: inline-block;
+    //         vertical-align: middle;
+    //         font-size: 0.8em;
+    //         margin-left: 0.4em;
+    //         margin-top: -0.9em;
+    //     }
+    // }
 }
