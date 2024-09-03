@@ -1,0 +1,201 @@
+.service-details-hero {
+    position: relative;
+    background-color: var(--color-gray);
+
+    .img-1 {
+        display: none;
+        position: absolute;
+        bottom: 0;
+
+        @include desktop {
+            display: block;
+        }
+    }
+
+    .img-2 {
+        display: none;
+        position: absolute;
+        right: 0;
+
+        @include desktop {
+            display: block;
+        }
+    }
+
+    .container {
+        text-align: center;
+        padding-top: 60px;
+        padding-bottom: 80px;
+
+        h2 {
+            font-size: 30px;
+
+            @include tablet {
+                font-size: 40px;
+            }
+        }
+
+        .breadcrumb {
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .breadcrumb-home {
+                color: var(--color-primary);
+            }
+
+            i {
+                font-size: 10px;
+                padding: 0 10px;
+            }
+        }
+    }
+}
+
+.service-details-section {
+    
+    .container {
+        @include desktop {
+            display: flex;
+            padding-top: 80px;
+        }
+
+        .service-details-about {
+            display: flex;
+            padding: 40px 40px 0 40px;
+
+            @include desktop {
+                display: block;
+                padding-right: 30px;
+            }
+
+            .about-us-box {
+                @include center;
+                flex-direction: column;
+                gap: 20px;
+                
+                @include desktop {
+                    align-items: baseline;
+                }
+
+                p {
+                    padding-bottom: 30px;
+                    font-size: 14px;
+                }
+            }
+
+            .support-box {
+                display: none;
+                background-color: var(--color-primary);
+                border-radius: 3px;
+                position: relative;
+                width: 306px;
+                height: 223px;
+                padding: 20px;
+
+                @include desktop {
+                    display: block;
+                }
+
+                h4 {
+                    color: var(--color-accent);
+                }
+
+                img {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                }
+
+                p {
+                    color: var(--color-light);
+                    font-size: 14px;
+                    padding-bottom: 20px;
+                }
+
+                form {
+                    position: relative;
+
+                    input {
+                        padding: 15px 20px;
+                        border-radius: 3px;
+                        border: 1px solid #ebebeb;
+                        width: 265px;
+                        
+                        &::placeholder {
+                            color: #aaa;
+                            font-style: italic;
+                            font-size: 13px;
+                        }
+                    }
+
+                    i {
+                        color: var(--color-primary);
+                        position: absolute;
+                        right: 20px;
+                        bottom: 18px;
+                        z-index: 2;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
+        .service-details {
+            padding: 30px;
+            font-size: 14px;
+
+            @include desktop {
+                border-left: 1px solid #ececec;
+                padding: 0 0 0 40px;
+            }
+
+            img {
+                display: none;
+
+                @include desktop {
+                    display: block;
+                }
+            }
+
+            h4 {
+                font-size: 25px;
+                padding-top: 30px;
+            }
+
+            .text-box {
+                display: flex;
+                gap: 10px;
+                
+
+                i {
+                    padding-top: 5px;
+                    font-size: 6px;
+                    color: var(--color-secondary);
+                }
+            }
+
+            .achieve {
+                padding-bottom: 30px;
+            }
+        }
+    }
+}
+
+.service-details-form {
+    .container {
+        padding-top: 80px;
+        padding-bottom: 80px;
+
+        #question-form {
+            padding: 30px;
+            text-align: center;
+
+            @include tablet {
+                text-align: left;
+                padding: 0;
+            }
+        }
+    }
+}

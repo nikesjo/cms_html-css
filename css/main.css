@@ -47,12 +47,12 @@ body {
 }
 @media (min-width: 768px) {
   .container {
-    max-width: 720px;
+    min-width: 720px;
   }
 }
 @media (min-width: 1400px) {
   .container {
-    max-width: 1320px;
+    min-width: 1200px;
   }
 }
 
@@ -146,6 +146,23 @@ h5 {
 
 h6 {
   font-size: 14px;
+}
+
+form .content input, form .content textarea {
+  padding: 15px 20px;
+  resize: none;
+  border-radius: 3px;
+  border: 1px solid #ebebeb;
+}
+form .content input::-moz-placeholder, form .content textarea::-moz-placeholder {
+  color: #aaa;
+  font-style: italic;
+  font-size: 13px;
+}
+form .content input::placeholder, form .content textarea::placeholder {
+  color: #aaa;
+  font-style: italic;
+  font-size: 13px;
 }
 
 header .header-top {
@@ -278,6 +295,9 @@ header .header-menu .btn-menu {
 }
 .about-hero .container .breadcrumb {
   font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .about-hero .container .breadcrumb .breadcrumb-home {
   color: var(--color-primary);
@@ -458,6 +478,14 @@ header .header-menu .btn-menu {
     padding-right: 120px;
   }
 }
+.contact .container .contact-info h2 {
+  font-size: 30px;
+}
+@media (min-width: 768px) {
+  .contact .container .contact-info h2 {
+    font-size: 40px;
+  }
+}
 .contact .container .contact-info .contact-boxes .box {
   display: flex;
   justify-content: center;
@@ -477,6 +505,193 @@ header .header-menu .btn-menu {
   color: var(--color-primary);
   font-size: 14px;
   padding-left: 10px;
+}
+
+.service-details-hero {
+  position: relative;
+  background-color: var(--color-gray);
+}
+.service-details-hero .img-1 {
+  display: none;
+  position: absolute;
+  bottom: 0;
+}
+@media (min-width: 1400px) {
+  .service-details-hero .img-1 {
+    display: block;
+  }
+}
+.service-details-hero .img-2 {
+  display: none;
+  position: absolute;
+  right: 0;
+}
+@media (min-width: 1400px) {
+  .service-details-hero .img-2 {
+    display: block;
+  }
+}
+.service-details-hero .container {
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+.service-details-hero .container h2 {
+  font-size: 30px;
+}
+@media (min-width: 768px) {
+  .service-details-hero .container h2 {
+    font-size: 40px;
+  }
+}
+.service-details-hero .container .breadcrumb {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.service-details-hero .container .breadcrumb .breadcrumb-home {
+  color: var(--color-primary);
+}
+.service-details-hero .container .breadcrumb i {
+  font-size: 10px;
+  padding: 0 10px;
+}
+
+@media (min-width: 1400px) {
+  .service-details-section .container {
+    display: flex;
+    padding-top: 80px;
+  }
+}
+.service-details-section .container .service-details-about {
+  display: flex;
+  padding: 40px 40px 0 40px;
+}
+@media (min-width: 1400px) {
+  .service-details-section .container .service-details-about {
+    display: block;
+    padding-right: 30px;
+  }
+}
+.service-details-section .container .service-details-about .about-us-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (min-width: 1400px) {
+  .service-details-section .container .service-details-about .about-us-box {
+    align-items: baseline;
+  }
+}
+.service-details-section .container .service-details-about .about-us-box p {
+  padding-bottom: 30px;
+  font-size: 14px;
+}
+.service-details-section .container .service-details-about .support-box {
+  display: none;
+  background-color: var(--color-primary);
+  border-radius: 3px;
+  position: relative;
+  width: 306px;
+  height: 223px;
+  padding: 20px;
+}
+@media (min-width: 1400px) {
+  .service-details-section .container .service-details-about .support-box {
+    display: block;
+  }
+}
+.service-details-section .container .service-details-about .support-box h4 {
+  color: var(--color-accent);
+}
+.service-details-section .container .service-details-about .support-box img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.service-details-section .container .service-details-about .support-box p {
+  color: var(--color-light);
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+.service-details-section .container .service-details-about .support-box form {
+  position: relative;
+}
+.service-details-section .container .service-details-about .support-box form input {
+  padding: 15px 20px;
+  border-radius: 3px;
+  border: 1px solid #ebebeb;
+  width: 265px;
+}
+.service-details-section .container .service-details-about .support-box form input::-moz-placeholder {
+  color: #aaa;
+  font-style: italic;
+  font-size: 13px;
+}
+.service-details-section .container .service-details-about .support-box form input::placeholder {
+  color: #aaa;
+  font-style: italic;
+  font-size: 13px;
+}
+.service-details-section .container .service-details-about .support-box form i {
+  color: var(--color-primary);
+  position: absolute;
+  right: 20px;
+  bottom: 18px;
+  z-index: 2;
+  font-size: 20px;
+}
+.service-details-section .container .service-details {
+  padding: 30px;
+  font-size: 14px;
+}
+@media (min-width: 1400px) {
+  .service-details-section .container .service-details {
+    border-left: 1px solid #ececec;
+    padding: 0 0 0 40px;
+  }
+}
+.service-details-section .container .service-details img {
+  display: none;
+}
+@media (min-width: 1400px) {
+  .service-details-section .container .service-details img {
+    display: block;
+  }
+}
+.service-details-section .container .service-details h4 {
+  font-size: 25px;
+  padding-top: 30px;
+}
+.service-details-section .container .service-details .text-box {
+  display: flex;
+  gap: 10px;
+}
+.service-details-section .container .service-details .text-box i {
+  padding-top: 5px;
+  font-size: 6px;
+  color: var(--color-secondary);
+}
+.service-details-section .container .service-details .achieve {
+  padding-bottom: 30px;
+}
+
+.service-details-form .container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.service-details-form .container #question-form {
+  padding: 30px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .service-details-form .container #question-form {
+    text-align: left;
+    padding: 0;
+  }
 }
 
 footer {

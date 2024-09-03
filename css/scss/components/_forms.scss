@@ -1,0 +1,17 @@
+form {
+    .content {
+        input, textarea {
+            padding: 15px 20px;
+            resize: none;
+            border-radius: 3px;
+            border: 1px solid #ebebeb;
+            
+            &::placeholder {
+                color: #aaa;
+                font-style: italic;
+                font-size: 13px;
+            }
+        }
+
+    }
+}

@@ -29,6 +29,9 @@
 
         .breadcrumb {
             font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             .breadcrumb-home {
                 color: var(--color-primary);
@@ -229,6 +232,14 @@
             @include desktop {
                 text-align: left;
                 padding-right: 120px;
+            }
+
+            h2 {
+                font-size: 30px;
+
+                @include tablet {
+                    font-size: 40px;
+                }
             }
 
             .contact-boxes {
